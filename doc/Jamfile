@@ -117,6 +117,7 @@ boostbook url
         url_doc
     :
         <xsl:param>boost.root=../../../..
+        <xsl:param>nav.layout=none
         <xsl:param>boost.image.src=images/doc-logo.png
         <xsl:param>boost.image.alt="Boost.URL Logo"
         <xsl:param>boost.image.w=880
