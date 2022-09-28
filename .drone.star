@@ -40,7 +40,7 @@ def main(ctx):
   linux_cxx("GCC 12: C++17,20", "g++-12", packages="g++-12", buildscript="drone", buildtype="boost", image="cppalliance/droneubuntu2204:1", environment={'B2_TOOLSET': 'gcc-12', 'B2_CXXFLAGS': '-Werror -funsigned-char', 'B2_CXXSTD': '17,20'}, globalenv=globalenv),
 
   # Latest clang
-  linux_cxx("Clang 14: C++17,20", "clang++-14", packages="clang-14 libstdc++-10-dev", llvm_os="jammy", llvm_ver="14", buildscript="drone", buildtype="boost", image="cppalliance/droneubuntu2204:1", environment={'B2_TOOLSET': 'clang-14', 'B2_CXXFLAGS': '-Werror', 'B2_CXXSTD': '17,20'}, globalenv=globalenv),
+  linux_cxx("Clang 15: C++17,20", "clang++-14", packages="clang-15 libstdc++-10-dev", llvm_os="jammy", llvm_ver="15", buildscript="drone", buildtype="boost", image="cppalliance/droneubuntu2204:1", environment={'B2_TOOLSET': 'clang-15', 'B2_CXXFLAGS': '-Werror', 'B2_CXXSTD': '17,20'}, globalenv=globalenv),
 
   # Oldest compilers
   linux_cxx("GCC 4.8: C++11", "g++-4.8", packages="g++-4.8", buildscript="drone", buildtype="boost", image="cppalliance/droneubuntu1604:1", environment={'B2_TOOLSET': 'gcc-4.8', 'B2_CXXFLAGS': '-Werror', 'B2_CXXSTD': '11'}, globalenv=globalenv),
@@ -95,6 +95,7 @@ def main(ctx):
   linux_cxx("Clang 11: C++14,17", "clang++-11", packages="clang-11 libstdc++-9-dev", llvm_os="focal", llvm_ver="11", buildscript="drone", buildtype="boost", image="cppalliance/droneubuntu2004:1", environment={'B2_TOOLSET': 'clang-11', 'B2_CXXFLAGS': '-Werror', 'B2_CXXSTD': '14,17'}, globalenv=globalenv),
   linux_cxx("Clang 12: C++17,20", "clang++-12", packages="clang-12 libstdc++-9-dev", llvm_os="focal", llvm_ver="12", buildscript="drone", buildtype="boost", image="cppalliance/droneubuntu2004:1", environment={'B2_TOOLSET': 'clang-12', 'B2_CXXFLAGS': '-Werror', 'B2_CXXSTD': '17,20'}, globalenv=globalenv),
   linux_cxx("Clang 13: C++17,20", "clang++-13", packages="clang-13 libstdc++-10-dev", llvm_os="jammy", llvm_ver="13", buildscript="drone", buildtype="boost", image="cppalliance/droneubuntu2204:1", environment={'B2_TOOLSET': 'clang-13', 'B2_CXXFLAGS': '-Werror', 'B2_CXXSTD': '17,20'}, globalenv=globalenv),
+  linux_cxx("Clang 14: C++17,20", "clang++-14", packages="clang-14 libstdc++-10-dev", llvm_os="jammy", llvm_ver="14", buildscript="drone", buildtype="boost", image="cppalliance/droneubuntu2204:1", environment={'B2_TOOLSET': 'clang-14', 'B2_CXXFLAGS': '-Werror', 'B2_CXXSTD': '17,20'}, globalenv=globalenv),
 
   # arm64 (unsigned char)
   linux_cxx("ARM64: Clang 12", "clang++-12", packages="clang-12 libstdc++-9-dev", llvm_os="focal", llvm_ver="12", buildscript="drone", buildtype="boost", image="cppalliance/droneubuntu2004:multiarch", environment={'B2_TOOLSET': 'clang-12', 'B2_CXXFLAGS': '-Werror', 'B2_CXXSTD': '11,14,17,20'}, arch="arm64", globalenv=globalenv),
