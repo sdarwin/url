@@ -13,4 +13,21 @@
 
 #include <boost/url/param.hpp>
 
+namespace boost {
+namespace urls {
+namespace subdir_a_coverage_detail {
+
+inline
+int
+coverage_probe(int v)
+{
+    if (v > 0)
+        return v + 1;
+    return v;
+}
+
+} // subdir_a_coverage_detail
+} // urls
+} // boost
+
 #endif

@@ -22,6 +22,9 @@ struct coverage_deep_path_subdir_a_test
         BOOST_TEST(p.has_value);
         BOOST_TEST_EQ(p.key, "alpha");
         BOOST_TEST_EQ(p.value, "beta");
+        BOOST_TEST_EQ(
+            subdir_a_coverage_detail::coverage_probe(1),
+            2);
     }
 };
 
